@@ -5,4 +5,18 @@ body {
 }
 
 <link rel="stylesheet" href="style.css">
+<style>
+.download-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #0b3d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.download-btn:hover {
+    background-color: #092f6b;
+}
+</style>
 
