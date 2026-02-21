@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b1a40">
+
   <title>My Website</title>
   <link rel="stylesheet" href="style.css">
 
@@ -23,6 +26,14 @@
 	</style>
 
 </head>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
+
 <body>
   <h1>Welcome to THE DEN </h1>
   <p>This website is managed by Tr Denis Twinamatsiko.</p>
