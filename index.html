@@ -25,6 +25,55 @@
 	}
 	</style>
 
+
+<style>
+/* Feedback Button */
+#feedbackBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Feedback Form Popup */
+#feedbackBox {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+#feedbackBox textarea {
+  width: 100%;
+  resize: none;
+}
+
+#feedbackBox button {
+  background-color: green;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+</style>
+
+
+
+
 </head>
 
 <script>
@@ -259,8 +308,45 @@ Not yet uploaded, SORRY.
 
 
 
-
-
 </div>
+
+
+
+
+
+
+
+
+
+ <button id="feedbackBtn" onclick="toggleFeedback()">Feedback</button>
+
+  <div id="feedbackBox">
+    <h3>Send Feedback</h3>
+    <textarea id="feedbackText" rows="4" placeholder="Write your feedback here..."></textarea><br>
+    <button onclick="sendFeedback()">Submit</button>
+  </div>
+
+  <script>
+    // Toggle the feedback box visibility
+    function toggleFeedback() {
+      const box = document.getElementById('feedbackBox');
+      box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // Send feedback via email
+    function sendFeedback() {
+      const feedback = document.getElementById('feedbackText').value;
+      if (feedback.trim() === "") {
+        alert("Please enter your feedback first!");
+        return;
+      }
+      const email = "twinamatsikodenis7@gmail.com"; // Your email
+      const subject = encodeURIComponent("Website Feedback");
+      const body = encodeURIComponent(feedback);
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+
 </body>
 </html>
