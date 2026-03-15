@@ -5,6 +5,46 @@ body {
 }
 
 
+/* Resource boxes */
+.resource-box{
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px auto;
+  width: 70%;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Titles inside resource boxes */
+.resource-box h4{
+  color: #0b1a40;
+  margin-bottom: 10px;
+}
+
+
+/* Two-column layout */
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Each column */
+.column{
+  width: 45%;
+}
+
+/* Section boxes */
+.resource-box{
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+
 /* Top website banner */
 h1{
   background-color: #0b1a40;
